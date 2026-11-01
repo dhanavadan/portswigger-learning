@@ -3,3 +3,16 @@ xss has three types
 1.reflected
 2.stored
 3.dom
+
+
+
+
+
+
+
+
+
+reflected:
+in this the attacker javascript is requested by the user browser , hence the session cookie is stealen due to the javascript code runs on user browser when it render the website 
+it is performed when attacker write javascript code to steal the session from user , and paste it on the websites input field {eg comments } , when user request the page from website then the
+attacler java code is also renderd in user browser , hence it steals
