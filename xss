@@ -16,3 +16,7 @@ reflected:
 in this the attacker javascript is requested by the user browser , hence the session cookie is stealen due to the javascript code runs on user browser when it render the website 
 it is performed when attacker write javascript code to steal the session from user , and paste it on the websites input field {eg comments } , when user request the page from website then the
 attacler java code is also renderd in user browser , hence it steals
+
+
+csrf token:
+this is the token embedded inside the original website html code , this token verifies the user request comes from original website with the csrf token , instead of attacker modified website 
