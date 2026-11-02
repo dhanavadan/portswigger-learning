@@ -48,3 +48,24 @@ window.addEventListener('DOMContentLoaded', function(){
     })
 })
 </script>
+
+var is a keyword used to declare a variable.
+Think of a variable as a labeled storage box. When you type var token, you are telling the browser: "Create a storage box, label it 'token', and save this specific value inside it so I can use it later.
+
+FormData as a digital envelope designed to mimic an actual HTML form filled out by a user. Instead of sending raw text, it structures data into clean key-value pairs (like postId: 8 or comment: [stolen cookies]) 
+so the web server can read it exactly like a normal form submission.
+
+fetch is a tool in javascript:
+
+It transmits the contents of var data to a specified endpoint.
+'/post/comment' (The Endpoint):
+This is the destination URL where the data is being sent.
+no-cors', the browser is told to send a "simple" request and ignore the response.
+
+The window.addEventListener('DOMContentLoaded', ...) command is an event listener. In JavaScript, its job is to wait until the webpage's structure is completely loaded before 
+running the code inside it
+
+Without the listener: If the script runs the exact millisecond the page starts loading, the browser won't have processed the HTML form elements yet. 
+The document.getElementsByName('csrf')[0] element won't exist in the browser's memory, causing the script to crash with a TypeError: Cannot read properties of undefined error.
+With the listener: By wrapping everything in DOMContentLoaded, the script guarantees that the HTML input field named csrf is present in the browser's DOM. 
+This ensures that it successfully grabs the anti-CSRF token and the user's document.cookie before using fetch to send them out.
