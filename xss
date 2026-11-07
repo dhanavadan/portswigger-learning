@@ -103,3 +103,29 @@ in this the two lines
 <input type="password" name="password" onchange="hax()">
 is html which acts like a login page tricking the browser this is also a login page and enter the password the moment password is entered onchange="hax()"the function hax is called , onchange tells
 the moment password is filled call hax function
+
+
+API:
+ every website store data in server not in html or css way , but save in raw manner {"user":{"name":"...","id":"..."},"tweets":[...]} when user requested the data api data is sent first then 
+renedered by frontend to add html css , this is client side rendering
+1. Client-Side Rendering
+
+    How it works: The server sends a nearly empty HTML skeleton and a massive JavaScript file to your browser. Your browser runs that JavaScript, which then reaches back out to the server's API,
+fetches raw JSON data, and builds the visual website directly inside your device's memory.
+
+2. Server-Side Rendering (What you saw on GitHub)
+
+    How it works: The user's device does no building at all. When you request a page, the backend server talks to its own database, stitches the data together, and builds the complete,
+finished HTML file on the server. It then sends that fully painted graphical blueprint over the internet to your browser. No API is sent to your device to build the initial page.
+
+How SSR Works with APIs:
+
+1. Request: The user requests a page from the server.
+2. Server-Side Data Fetching: The server runs code to fetch the necessary data from an external API or database before generating the response.
+3. HTML Generation: The server injects that API data directly into the HTML templates/components.
+4. Response: The server sends the completed, populated HTML string to the browser.
+5. Immediate Paint: The browser parses the HTML and immediately displays the rendered page to the user.
+6. Hydration (Later): JavaScript files load afterward to attach event listeners (like button clicks) and make the page interactive
+
+javascript front end:
+“JS is used to request and respond to server” — correct. It initiates requests (clicks, fetch() calls) and handles the responses that come back (updates the page
